@@ -34,10 +34,8 @@ export async function createWinery(request) {
 // }
 
 export async function updateOrDeleteWinery(request, id) {
-  // console.log(request)
-  // console.log(id)
-  let data = await formToObj(request)
-  // setTimeout(console.log(data), 5000)
+
+  const data = await formToObj(request)
 
   if (data.intent === 'update') {
     return await axios.put(`/api/wineries/${id}`, data, {

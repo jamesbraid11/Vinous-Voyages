@@ -56,9 +56,9 @@ export default function Nav() {
   async function submitRegistration(e) {
     e.preventDefault()
     const res = await registerUser(registerData)
-    console.log(res)
+    // console.log(res)
     if (res.status === 201) {
-      console.log('REGISTRATION SUCCESSFUL')
+      // console.log('REGISTRATION SUCCESSFUL')
       setModalShow(false)
       setLoginModalShow(true)
     }
@@ -67,9 +67,9 @@ export default function Nav() {
   async function submitLogin(e) {
     e.preventDefault()
     const res = await loginUser(loginData)
-    console.log(res)
+    // console.log(res)
     if (res.status === 202) {
-      console.log('LOGIN SUCCESSFUL')
+      // console.log('LOGIN SUCCESSFUL')
       setLoginModalShow(false)
       setToken(res.data.token)
     }

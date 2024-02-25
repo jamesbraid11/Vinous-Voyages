@@ -9,38 +9,38 @@ import 'leaflet/dist/leaflet.css'
 
 export default function WinerySingle() {
 
-const winery = useLoaderData()
-const { name, about, region, appelation, varietalsGrown, image, range, website, phone, nearbyCity, attractions, address, latitude, longitude, _id, reviews} = winery
+  const winery = useLoaderData()
+  const { name, about, region, appelation, varietalsGrown, image, range, website, phone, nearbyCity, attractions, address, latitude, longitude, _id, reviews } = winery
 
-const customIcon = new Icon({
-  iconUrl: "https://icons.veryicon.com/png/o/clothes-accessories/platinum-knight-travel-shot-monochrome-icon/wine-glass-46.png",
-  iconSize: [38, 38]
-})
+  const customIcon = new Icon({
+    iconUrl: "https://icons.veryicon.com/png/o/clothes-accessories/platinum-knight-travel-shot-monochrome-icon/wine-glass-46.png",
+    iconSize: [38, 38]
+  })
 
   return (
     <>
       <div className="sglHeader">
-        <Link to={`/wineryIndex`} className="backBtn">Back</Link>
-      {activeUser() === winery.owner._id &&
-        <div>
-          <button className="update-delete"><Link to={`/wineryIndex/${_id}/update`} className="update-delete-a">Update / Delete</Link></button>
-        </div>
-      }
+        <Link to={'/wineryIndex'} className="backBtn">Back</Link>
+        {activeUser() === winery.owner._id &&
+          <div>
+            <button className="update-delete"><Link to={`/wineryIndex/${_id}/update`} className="update-delete-a">Update / Delete</Link></button>
+          </div>
+        }
       </div>
 
       <Container fluid className='single-winery-container overflow-auto'>
         <div className="WineryInfo">
           <div className="img-container">
-            <img className="imgDr"src={ image }/>
+            <img className="imgDr" src={image} />
           </div>
           <div className="text">
-            <h1 className="title-on-single">{ name }</h1>
-            <p className="region"><span className="text-header">Region: </span>{ region }</p>
-            <p className="appelation"><span className="text-header">Appelation: </span>{ appelation }</p>
+            <h1 className="title-on-single">{name}</h1>
+            <p className="region"><span className="text-header">Region: </span>{region}</p>
+            <p className="appelation"><span className="text-header">Appelation: </span>{appelation}</p>
             <ul className="range"> <span className="text-header">Range: </span>
               {range.map((item, idx) => {
                 return <li key={idx}>{item}</li>
-                })}
+              })}
             </ul>
             <ul className="varietals"> <span className="text-header">Varietals planted: <br /></span>
               {varietalsGrown.map((item, idx) => {
@@ -51,7 +51,7 @@ const customIcon = new Icon({
         </div>
 
         <div className="about-section">
-          <p className="about"><span className="about-header">About: {name} </span><br />{ about }</p>
+          <p className="about"><span className="about-header">About: {name} </span><br />{about}</p>
         </div>
 
         <div className="location-section">
@@ -64,46 +64,46 @@ const customIcon = new Icon({
           </div>
           <div className="single-map">
             <MapContainer center={[latitude, longitude]} zoom={16}>
-          
+
               <TileLayer
-              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-              url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
+                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
               />
               <Marker position={[latitude, longitude]} icon={customIcon}></Marker>
             </MapContainer>
           </div>
         </div>
-          <div className="review-container">
-            <Form className="review-form" method="POST">
-              <div className="review-title">
-                Leave a review<br></br>
-              </div>
+        <div className="review-container">
+          <Form className="review-form" method="POST">
+            <div className="review-title">
+              Leave a review<br></br>
+            </div>
             <label htmlFor="rating">Score:</label>
-            <input type="text" name="rating" className="rating-box" placeholder="1-100"/>
+            <input type="text" name="rating" className="rating-box" placeholder="1-100" />
             <label hidden htmlFor="text">Review Description</label>
-            <textarea className="review-text-box"name="text" placeholder="Review description..." />
+            <textarea className="review-text-box" name="text" placeholder="Review description..." />
             <button type="submit" name="intent" value="create">Post Review</button>
-            </Form>
-            {reviews.map(review => {
-              const { _id, rating, text, owner } = review
-              return (
-                <div key={_id} className="review">
-                  <div className="reviewer-name">
+          </Form>
+          {reviews.map(review => {
+            const { _id, rating, text, owner } = review
+            return (
+              <div key={_id} className="review">
+                <div className="reviewer-name">
                   <p>{owner.username}</p>
+                </div>
+                <div className="reviewed-box">
+                  <div className="reviewed-textbox">
+                    <p className="p-score">{rating}</p>
+                    <p className="p-text">{text}</p>
                   </div>
-                  <div className="reviewed-box">
-                    <div className="reviewed-textbox">
-                      <p className="p-score">{rating}</p>
-                      <p className="p-text">{text}</p>
-                    </div>
-                    <div className="review-delete">
-                      {activeUser() === owner._id && <button className="delete" name="intent" value="delete">Delete</button>}
-                    </div>
+                  <div className="review-delete">
+                    {activeUser() === owner._id && <button className="delete" name="intent" value="delete">Delete</button>}
                   </div>
                 </div>
-              )
-            })}
-          </div>
+              </div>
+            )
+          })}
+        </div>
       </Container>
     </>
   )
