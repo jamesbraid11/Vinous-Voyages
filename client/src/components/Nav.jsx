@@ -82,6 +82,10 @@ export default function Nav() {
           <h1><Link to='/'>Vinous Voyages</Link></h1>
         </div>
         <div className="header-menues">
+          <Button className="icon" onClick={toggleModal}>
+            <FaRegUserCircle className="user-icon" />
+            {/* <img className='logo rounded-circle d-inline-block align-center' src={userIcon} height='50' alt='user icon' /> */}
+          </Button>
           <header className='p-2 p-md-3 p-lg-4'>
             <button className='nav-toggle' onClick={() => setShow(true)} >
               <span></span>
@@ -89,32 +93,28 @@ export default function Nav() {
               <span></span>
             </button>
           </header>
-
-          <Modal show={show} fullscreen={true} onHide={() => setShow(false)} className='indexs'>
-            <Modal.Header closeButton>
-            </Modal.Header>
-            <nav onClick={() => setShow(false)}>
-              <ul className=' burger-menu nav nav-underline navbar-link-danger bg-link-danger'>
-                <li className='nav-item'>
-                  <Link to='/' className='nav-link' >Home</Link>&nbsp;
-                </li>
-                <li className='nav-item'>
-                  <Link to='/wineryIndex' className='nav-link' >Winery Index</Link>&nbsp;
-                </li>
-                <li className='nav-item'>
-                  <Link to='/wineryIndex/create' className='nav-link' >Create Winery</Link>&nbsp;
-                </li>
-                <li className='nav-item'>
-                  <Link to='/profile' className='nav-link' >Profile</Link>&nbsp;
-                </li>
-              </ul>
-            </nav>
-          </Modal>
-          <Button className="icon" onClick={toggleModal}>
-            <FaRegUserCircle fill="black" className="user-icon"/>
-            {/* <img className='logo rounded-circle d-inline-block align-center' src={userIcon} height='50' alt='user icon' /> */}
-          </Button>
         </div>
+
+        <Modal show={show} fullscreen={true} onHide={() => setShow(false)} className='indexs'>
+          <Modal.Header closeButton>
+          </Modal.Header>
+          <nav onClick={() => setShow(false)}>
+            <ul className=' burger-menu nav nav-underline navbar-link-danger bg-link-danger'>
+              <li className='nav-item'>
+                <Link to='/' className='nav-link' >Home</Link>&nbsp;
+              </li>
+              <li className='nav-item'>
+                <Link to='/wineryIndex' className='nav-link' >Winery Index</Link>&nbsp;
+              </li>
+              <li className='nav-item'>
+                <Link to='/wineryIndex/create' className='nav-link' >Create Winery</Link>&nbsp;
+              </li>
+              <li className='nav-item'>
+                <Link to='/profile' className='nav-link' >Profile</Link>&nbsp;
+              </li>
+            </ul>
+          </nav>
+        </Modal>
 
         <Modal show={modalShow} halfscreen={true} onHide={() => setModalShow(false)} className='centered-modal'>
           <Modal.Header closeButton>
