@@ -83,7 +83,7 @@ export default function Nav() {
         </div>
         <div className="header-menues">
           <Button className="icon" onClick={toggleModal}>
-            <FaRegUserCircle className="user-icon" />
+            <FaRegUserCircle fill="rgb(106, 5, 5)" className="user-icon" />
             {/* <img className='logo rounded-circle d-inline-block align-center' src={userIcon} height='50' alt='user icon' /> */}
           </Button>
           <header className='p-2 p-md-3 p-lg-4'>

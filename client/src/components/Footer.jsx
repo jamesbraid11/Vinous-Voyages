@@ -10,7 +10,7 @@ export default function Footer() {
       <h1 className='footer-h1'>Vinous Voyages</h1>
       <div className="github">
         <FaGithub /> &copy; Made by
-        <a href='https://github.com/player1xs' className="github-link"> Benedict</a>,
+        <a href='https://github.com/player1xs' className="github-link"> Benedict </a>,
         <a href='https://github.com/jamesbraid11' className="github-link"> James </a>,
         and <a href='' className="github-link"> Nasiim </a>
         {new Date().getFullYear()}
