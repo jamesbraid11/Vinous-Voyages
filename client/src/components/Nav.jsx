@@ -105,7 +105,7 @@ export default function Nav() {
                   <Link to='/wineryIndex/create' className='nav-link' >Create Winery</Link>&nbsp;
                 </li>
                 <li className='nav-item'>
-                  <Link to='/profile' className='nav-link' >profile</Link>&nbsp;
+                  <Link to='/profile' className='nav-link' >Profile</Link>&nbsp;
                 </li>
               </ul>
             </nav>
@@ -121,21 +121,21 @@ export default function Nav() {
           </Modal.Header>
           <Modal.Body>
             <form className='create'>
-              <h1 className='text-center'>sign-up</h1>
+              <h1 className='text-center'>Register</h1>
               <input type='text' name='username' placeholder='Username...' onChange={handleChange} />
               <input type='email' name='email' placeholder='Email...' onChange={handleChange} />
               <input type='password' name='password' placeholder='Password...' onChange={handleChange} />
-              <input type='password' name='passwordConfirmation' placeholder='confirm password...' onChange={handleChange} />
+              <input type='password' name='passwordConfirmation' placeholder='Confirm password...' onChange={handleChange} />
               <button className='btn btn-danger' type='submit' onClick={submitRegistration}>Register</button>
               {/* Below will return a message to user if username taken, etc. Need to set this up. */}
               {/* {res && <p className='danger'>{res.data.message}</p>} */}
               <div className='sign in'>
-                Already have an account ?  &nbsp;
+                Already have an account?  &nbsp;
                 <button type="button" className="btn btn-danger" onClick={() => {
                   setModalShow(false) // Close signup modal if open
                   setLoginModalShow(true) // Open login modal
                 }}>
-                  log-in
+                  Login
                 </button>
               </div>
             </form>
@@ -157,7 +157,7 @@ export default function Nav() {
                 setModalShow(true)
                 setLoginModalShow(false)
               }}>
-                sign up
+                Register
               </button>
             </form>
           </Modal.Body>
