@@ -64,11 +64,11 @@ This was a collaborative project in which I was placed in a group of three. We w
 
 After deciding on the idea for our application, I created a diagram of the main components we would need on the client side. I then assigned names for the components, their paths and their loaders or actions (where applicable) to be used in our code.
 
-<img width="1184" alt="1-front-end-diagram" src="https://github.com/jamesbraid11/Vinous-Voyages/assets/147768485/2275da0c-6f70-416e-b163-dba3e99f41c8">
+<img width="800" alt="1-front-end-diagram" src="https://github.com/jamesbraid11/Vinous-Voyages/assets/147768485/2275da0c-6f70-416e-b163-dba3e99f41c8">
 
 I also led in creating a diagram for our server side, detailing the flow of processing and connectivity of our application.
 
-<img width="300" alt="2-back-end-diagram" src="https://github.com/jamesbraid11/Vinous-Voyages/assets/147768485/43c42c36-ad96-4db8-b9c3-525b6d7ecbe2">
+<img width="400" alt="2-back-end-diagram" src="https://github.com/jamesbraid11/Vinous-Voyages/assets/147768485/43c42c36-ad96-4db8-b9c3-525b6d7ecbe2">
 
 Next, we created wireframe designs for our main client side components. Below is an example, the wireframe for our home page:
 
