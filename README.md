@@ -10,14 +10,14 @@ The third project I undertook in my SEI training was to build a full-stack MERN 
 
 ## Code Installation
 
-1. [GitHub Repo](https://github.com/jamesbraid11/Vinous-Voyages) >>
-2. Download directory >>
+1. [GitHub repo](https://github.com/jamesbraid11/Vinous-Voyages)
+2. Download directory
 3. Server side:
-   i. npm install in root directory
-   ii. npm run serve
+   - npm install in root directory
+   - npm run serve
 4. Client side (cd to client directory):
-   i. npm install
-   ii. npm run dev
+   - npm install
+   - npm run dev
 5. Open local host in local browser
 
 ## Timeframe & Working Team
