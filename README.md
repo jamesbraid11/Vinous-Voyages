@@ -1,251 +1,177 @@
-# Project Three - Vinous Voyages
+## Vinous Voyages
 
 ## Description
 
-Project Three was a group  project to create a MERN full stack application with CRUD capabilities. Create a server-side database (MondoDB) and connect it with a React frontend using an Express API to serve our data.
+The third project I undertook in my SEI training was to build a full-stack MERN application. This application was to consume data from our own API and contain full CRUD capabilities for users on the client side. My two partners and I decided to build an application where users could learn about wineries around the world, with a view to planning visits to them. Once registered, users were to have full CRUD capabilities with adding/owned wineries on the application, and CD capabilities with reviewing wineries.
 
+## Deployment link
 
-## Deployment Link
+[https://vinous-voyages-8453f6380e78.herokuapp.com](https://vinous-voyages-8453f6380e78.herokuapp.com)
 
-https://bn-vinous-voyages-ee552d981c31.herokuapp.com/
+## Code Installation
 
-## Instructions 
+1. [GitHub Repo](https://github.com/jamesbraid11/Vinous-Voyages) >>
+2. Download directory >>
+3. Server side:
+   i. npm install in root directory
+   ii. npm run serve
+4. Client side (cd to client directory):
+   i. npm install
+   ii. npm run dev
+5. Open local host in local browser
 
-Follow the link and enjoy the site. No need to install any packages. Click and play.
+## Timeframe & Working Team
 
-## Timeframe & Team
+This was a collaborative project in which I was placed in a group of three. We were given nine days to complete this project, including planning.
 
-This was a group project with James Baird, Benedict Norton (myself), and Nasiim Nuur.
-The project was officially to be worked on from the 6th Dev(Wednesday) until 15th Dec(Fri) with presentations being held on that 15th.
+## Technologies Used
 
-## Technology
-### Technologies used:
-VS Code
-Excalidraw
-Heroku
-Opera browser (Chromatic)
-
-### Packages for VS Code used:
-React
-React Router Dom
-React Bootstrap
-React Carousel
-React Leaflet (Map package)
-MongoDB
-Sass
-
-### Languages used:
-HTML
-Javascript
-CSS/ SCSS (with Sass)
+- VS Code
+- GitHub
+- Insomnia
+- Cloudinary
+- Leaflet
+- Node.js
+- MongoDB Atlas
+- React
+- React Router
+- Express
+- Mongoose
+- JSON Web Token
+- Axios
+- Sass
+- Bootstrap
+- React Bootstrap
 
 ## Brief
-This project was to demonstrate our skill in creating a backend server and then feeding the information to a frontend application.
 
-### Requirements:
-Build a full-stack application by making your own backend and your own front-end.
-Use an Express API to serve your data from a Mongo database.
-Consume your API with a separate front-end built with React.
-Be a complete product which means to add multiple relationships and CRUD functionality for at least a couple of models.
-Implement thoughtful user stories/wireframes that are significant enough to help you know which features are core MVP and which you can cut.
-Have a visually impressive design to kick your portfolio up a notch.
-Be deployed online.
+**Technical Requirements**
+- Build a full-stack application by making your own backend and your own frontend.
+- Use an Express API to serve your data from a Mongo database.
+- Consume your API with a separate frontend built with React.
+- Be a complete product, which most likely means multiple relationships and CRUD functionality for at least a couple of models.
+- Implement thoughtful user stories/wireframes that are significant enough to help you know which features are core MVP and which you can cut.
+- Have a visually impressive design.
+- Be deployed online so it's publicly accessible.
+
+**Necessary Deliverables**
+- A working app hosted on the internet.
+- A link to your hosted working app in the URL section of your Github repo.
+- A git repository hosted on Github, with a link to your hosted project, and frequent commits dating back to the very beginning of the project.
+- A readme.md file.
 
 ## Planning
-We had a decent conversation about what topic our project will be on first with every member pitching at least one idea. We settled on my pitch which was about wineries of the world; as my idea was the most fleshed out; while pitching we even started making notes which ended up being our pseudocode.
 
-Once the idea was in place we put some wireframes together (below). After which we converted our pseudocode onto a Trello board plan, so we could see where everyone was. When the Trello board was in place, we started assigning some tasks from the get go and mostly worked independently.
+After deciding on the idea for our application, I created a diagram of the main components we would need on the client side. I then assigned names for the components, their paths and their loaders or actions (where applicable) to be used in our code.
 
-It was important to me that we had regular check-ins. Therefore we had a morning standup together, to see what we got up to after hours (if we did anything), and an end-of-day check-in. We ended up having additional quick meetings throughout the day when one of us finished a larger task in a show-and-tell manner; this allowed other members to take that code and work on it if it intertwined with their work; or for example was ready to be styled.
+![1-front-end-diagram](https://github.com/jamesbraid11/Vinous-Voyages/assets/147768485/842a8282-65e7-4e72-88d2-0fdb48bb57a8)
 
+I also led in creating a diagram for our server side, detailing the flow of processing and connectivity of our application.
 
-### Wireframe
-The first step in planning was generating  wireframes. Below you see how our backend communicates with the front-end, the front-end communicating with its multi-page setup, and page layout.
+![2-back-end-diagram](https://github.com/jamesbraid11/Vinous-Voyages/assets/147768485/85dad857-b92f-449b-93c9-90322e65db2a)
 
+Next, we created wireframe designs for our main client side components. Below is an example, the wireframe for our home page:
 
+![3-wireframe](https://github.com/jamesbraid11/Vinous-Voyages/assets/147768485/fc4ad071-faf5-433d-a9c8-5a93aaedea77)
 
+Finally, I created a Trello board for this project to ensure we would keep track of our progress accurately and share workloads fairly.
 
+![4-trello](https://github.com/jamesbraid11/Vinous-Voyages/assets/147768485/7c00eb2f-3007-43e5-9f77-9e3653bd98a4)
 
+## Code Process
 
+While one partner built the server side for our application, after drawing up wireframes for our main client side components, I set up main.jsx with child pathways using React Router. I then created files for our main components, stubbed them up and tested the pathways on my local browser. Once the server side was built, I led its testing using Insomnia. Once we were happy that all functionality was working correctly and data being stored on MongoDB Atlas, I was able to start building functionality on the client side components.
 
-### Pseudocode/Trello
-We first started writing a pseudocode/to-do list, which we quickly converted to a Trello board. Here we could see what each member would work on. When I was ready to move to a new task, I would pick a tab -> assign my name -> move to the ‘in progress’ column -> once completed add to the ‘completed’ pile. We made sure to have an MVP section and a reach goal/icebox section; as we had several ideas we wanted to add.
+First, I created the winery.js loader and wrote functions to fetch all of the wineries data and just that of a single winery from our API. It did not initially work, but after some research, my partners and I discovered that we needed to add a server proxy to the vite.config.js file:
 
-![1](https://github.com/player1xs/Space-Invaders/assets/148089820/51daf30c-1dd2-4462-a53f-c17d848b66b5)
+![5-server-proxy](https://github.com/jamesbraid11/Vinous-Voyages/assets/147768485/bca3e81b-9c92-45c5-b02f-ec626baf98f4)
 
+While others in the group then worked on the winery index component, I completed coding the register and login components. This included creating an action file named auth.js that would post user submitted data to the database:
 
-## Build/ Code Process
-THE BELOW PARTS ARE ONLY WHAT I HAVE WORKED ON MYSELF, OR COLLABORATIVELY WITH MY TEAM. 
-TO SEE NASSIM OR JAMES’ SOLO INPUTS PLEASE REFER TO THEIR README.
+![6-auth-post](https://github.com/jamesbraid11/Vinous-Voyages/assets/147768485/4f026232-c719-4a61-b6b3-294d91f04d22)
 
-### Backend setup
-First I set out to create the backend/server-side of our application. After installing packages mentioned above; I got to writing.
+I included a useEffect in both components that, if register or login was successful, would navigate the user back to the home component. In the useEffect for the login component, the user’s JSON Web Token (created on the server side) would be saved to local storage.
 
-Here is the schema I created for the main part of our database (which is about wineries). Some fields in the schema were added later; for example: the latitude and longitude fields; because of the Leaflet Map Module I used, as it required a certain input. With each input adding the type that can be input and of course mandatory fields which will be required for filtering options.
+Once winery data was being displayed on the winery index page, I created a dropdown filter by country, and a search bar that would find results matching against name, region, appellation and varietals grown. I was able to incorporate these into one function by combining the two filters into one useState variable as an object:
 
-Additionally I added a review schema, so people can leave a comment and rating; for the rating itself I created a virtual field which would take all left reviews and return an average on the winery itself.
+![7-filters](https://github.com/jamesbraid11/Vinous-Voyages/assets/147768485/d41af552-c2bb-4922-aecc-841bd94a8843)
+![8-filters](https://github.com/jamesbraid11/Vinous-Voyages/assets/147768485/ea2922ea-17a8-4e8a-8704-ef66426f8618)
 
-![2](https://github.com/player1xs/Space-Invaders/assets/148089820/cb028d32-27db-42f2-adf0-74a32e6cf625)
+This helped greatly in making the code in the winery index component concise. For the countries dropdown filter, I coded the options to be derived from unique values in the database. To protect from user spelling errors in typing this entry when adding a winery to the application, I noted adding autofill/dropdown capability to the country input field on the winery create component. I was later able to achieve this.
 
-Next was the User schema, so new accounts can be made. I added functions which would link wineries the user created to their profile page. Also a couple functions which would crypt the password and not read it back if called - for safety.
+I created a function called activeUser that would be used to display update and delete options for users looking at wineries or reviews that they own.
 
-![3](https://github.com/player1xs/Space-Invaders/assets/148089820/f6ee6a18-6730-42cb-87f0-d4c206948400)
+![9-active-user](https://github.com/jamesbraid11/Vinous-Voyages/assets/147768485/3e99abc1-d6bb-4fb1-87fc-56b3e7662ef9)
 
-Next I created a couple of controllers. 
-The first controller states the CRUD functionality for the wineries which I imported from models.wineries . Each function has a try/catch written into it. To make sure I could catch errors as they pop up and/or inform the user if a step in any of the CRUD attempts was wrong.
+Here is an example of its use in the WinerySingle.jsx file:
 
-The Update and Delete functions were only accessible if that particular user created the winery. Part of my try looked for ownership ID.
+![10-active-user](https://github.com/jamesbraid11/Vinous-Voyages/assets/147768485/826c7f50-eb58-407f-966d-15a691e475b9)
 
-![4](https://github.com/player1xs/Space-Invaders/assets/148089820/ac6020fa-5f1a-4d07-92ba-07ded1746127)
+Through research, I learned how to create one action function for a component that could handle multiple different user request types. I implemented this on the WineryUpdate.jsx component, on which a user can update or delete their winery. Please see the code snippets below.
 
-![5](https://github.com/player1xs/Space-Invaders/assets/148089820/bf905f1f-d01f-464e-817f-6b0db819c2f1)
+WineryUpdate.jsx:
 
-This file also included the Create/Delete function for reviews. Again, deletion of a comment was only possible if you wrote it.
+![11-update-or-delete](https://github.com/jamesbraid11/Vinous-Voyages/assets/147768485/2b2cc476-8b6a-4cdd-9e08-0bab74ef7e5c)
 
-![6](https://github.com/player1xs/Space-Invaders/assets/148089820/dc24b5e7-ec73-4e2b-9eb2-138d6cd969d9)
+The name and value values are added to the request data as a key value pair.
 
-The second controller was for the user. Here is the function to register; which also includes checks if the username is taken, email already used, and if the password + confirm matches. Below that the login function, which checks for correct input vs the database and assigns a token when all positive and keeps the token active for 10 days.
+main.jsx:
 
-![7](https://github.com/player1xs/Space-Invaders/assets/148089820/670676d0-23f0-45e7-839f-6ffb37ca15b6)
+![12-update-or-delete](https://github.com/jamesbraid11/Vinous-Voyages/assets/147768485/f22505a0-f902-453a-8411-cd62adfb1d85)
 
-Next, I created the routes for our server. This shows the path the information will follow depending on the method that needs using.
+The request is passed on to the updateOrDeleteWinery function.
 
-![8](https://github.com/player1xs/Space-Invaders/assets/148089820/a0d11a32-f52a-48e2-8fc5-6bf4c6b03626)
+winery.js:
 
-And also a secure route for the user information. Which deconstructs the payload information and then authorizes access.
+![13-update-or-delete](https://github.com/jamesbraid11/Vinous-Voyages/assets/147768485/1154df1f-c5f2-4803-815f-809c77ee4687)
 
-![9](https://github.com/player1xs/Space-Invaders/assets/148089820/9e784ff0-f0b2-4095-a0df-3298cf714ac2)
+The request is sorted using if statements according to the value of the intent key in the request data. This ensures the request is sent to the server side end point as the correct request type.
 
+I then used this same structure to make it possible for a user to create and delete (owned) reviews on the WinerySingle.jsx component.
 
-Next I updated the index.js file. Where I originally had some of my paths and methods written; and then created their own files for cleanliness. But evidence is still visible as this is where it all comes together to talk to each other and gets the server started and sent to the right place.
+![14-create-or-delete](https://github.com/jamesbraid11/Vinous-Voyages/assets/147768485/f6981408-bbc1-4c11-8729-d5484976fd71)
 
-![10](https://github.com/player1xs/Space-Invaders/assets/148089820/d9e2694e-4963-440d-8a79-b8c846435710)
+Lastly, one of my partners created a modal version of our register and log in components that launched from the ever-present nav bar. I wrote the functions that connected these successfully to the server side.
 
+![15-auth-functions](https://github.com/jamesbraid11/Vinous-Voyages/assets/147768485/3feeb9b8-0a56-49f1-bb55-d8f0703c2912)
 
+Other parts of the project that I did not lead on but got experience with were using Cloudinary to upload images securely and using Leaflet to create an interactive map of global locations.
 
-For the database to be accessed securely, I also created a .env file. Which holds the connection string to our MongoDB, our PORT number, and the SECRET key; I will however not add my code here for security reasons.
-SECRET, CONNECTION STRING, and PORT can be seen in the two images above.
+## Challenges/Wins
 
-After the server was set up, we sat down as a team and had a round of testing to see whether all functionalities are working. And all our methods carried out correctly.
+Combining multiple user request types in one action function was a big challenge and win in this project. After much research, I eventually found a very obscure, short and simple reference to this functionality on the React website. Once I did though, I was able to swiftly break down and adapt it to function for our needs in this application.
 
+One big challenge throughout this project was that one of my group members was quite far behind the expected achievement level in their programming ability. As a teacher, it came naturally to me to teach and coach them on many tools and methods throughout the process. This helped me to embed my course learning further, and I now feel extremely confident with many aspects of React based applications.
 
-### Leaflet
+## Key Learning
 
-Leaflet is a React module similar to Mapbox. This module allowed me to display a map of the world, add my own marker and even customise it.
+Over the course of this project, I became very confident with:
+- Sending requests to a server using Axios.
+- Using loaders and actions through React Router.
+- Registering and logging in users securely.
+- Creating and using JSON Web Tokens to alter user privileges.
+- Facilitating full CRUD capability for users in a MERN application.
 
-First I installed the leaflet package in the terminal. I created this in a separate component called Mapbox.jsx . Following online documentation, I imported the necessary actions: MapContainer - for the map box itself, TileLayer - this loaded the map in layers, main layer being the world map itself, and would let me add layers if needed if I wanted to add more complex information, Marker - this added a marker on the map when a new winery was created, and Popup - this would display some information when a marker is clicked (shown below).
-
-Map as shown on the homepage with all wineries.
-![11](https://github.com/player1xs/Space-Invaders/assets/148089820/87ec7211-fd92-4433-a977-71e39b932fb6)
-
-
-
-Seen here, when an icon is clicked, it would display the main image; name of the winery, and the country it is in. When the name is clicked it will take you directly to that winery single page. The customisation also allowed me to change the icon itself; so it would fit within the theme - a round icon with bottle and glass.
-
-![12](https://github.com/player1xs/Space-Invaders/assets/148089820/42136a7a-afd3-4585-81aa-1d05fe633229)
-
-Below is the Mapbox code. A rather straightforward package (although a little finnkey at first). First brought in our LoaderData from our database; which grabbed the geolocation (lat, long).
-
-Then is the Icon customisation line, with built in sizing rather than doing that in CSS.
-
-Then the actual display of it. First the Container, here I added in coordinates which centers the map and zoom. You could for example set it to Buckingham palace with zoom set to 15, and you would be right on top of it. I left it at 1 because I wanted the entire world in one frame. Then the TileLayer which would show the countries, streets, etc.. Inside that would be the individual markers. This would map through all the LoaderData from our db and place an icon from its coordinates and then Link to the relevant page.
-
-![13](https://github.com/player1xs/Space-Invaders/assets/148089820/cadb0238-4ed3-4008-87e9-d5d1831c91b4)
-
-I also added an additional mapbox on the single winery pages, near the contact/ address section, zoomed in. This map would only display that particular winery; and not all of them.
-
-![14](https://github.com/player1xs/Space-Invaders/assets/148089820/c86ca7f8-05d5-40d1-a900-7b75443c2a6c)
-
-### Hero Carousel
-
-I set up an image gallery on the homepage/ landing page. Once again, a straightforward react application. Installed the packages and imported the necessary actions.
-
-Created an array of images.
-And a function to display the images, and move through the carousel with arrow keys.
-
-![15](https://github.com/player1xs/Space-Invaders/assets/148089820/a1fa17ca-5f05-4a47-88c3-ee8f0007ce37)
-
-### Error Page
-Created a quick path in main.jsx to a component named: ErrorPage.jsx. In case a file path is lost or address is wrongly entered the user would land on a 404 page. Which displays a themed image and sends you back to the main page (actually first the user will be redirected to a RickRoll and then back to the main index).
-
-![16](https://github.com/player1xs/Space-Invaders/assets/148089820/0fd6b4fd-fd0c-475c-9e47-e21228ca4bf1)
-
-![17](https://github.com/player1xs/Space-Invaders/assets/148089820/35ad9436-4292-4d81-b355-5bf4453ce0bb)
-
-### Winery creation
-Working together with James, we structured a user-friendly winery creation page. James handled a lot of the logic here to connect the front end to the server-side database.
-I meanwhile created an account with cloudinary, a page that would handle our images on a cloud for all the wineries.
-
-Wrote a function that would talk to cloudinary. When an image is uploaded it would return an url and a secureUrl to tell us where it is. It would automatically take the secureUrl and post it to our database with the rest of the information.
-
-![18](https://github.com/player1xs/Space-Invaders/assets/148089820/7d660f1c-9692-4d5c-9a46-5645b7df7c57)
-
-Then added a line to the create Form. Which i Imported ImageUploadField from the file pictured above here.
-
-![19](https://github.com/player1xs/Space-Invaders/assets/148089820/26f0e84d-8d6a-4729-88f5-32fdcfba7c15)
-
-### Index Page
-Now it is time to start displaying our information. Once again using our LoaderData we pull information from our database. James created a filter and incredibly clever search function.
-The information on the index page is minimal, so I only pulled images and names. Each winery link to click was the entire image displaying the name in the bottom right, using flexbox and some clever layers of gradient shading; and threw in a little hover effect for a little extra pizzazz.
-
-![21](https://github.com/player1xs/Space-Invaders/assets/148089820/cea969dd-d93f-41f3-ae7e-af9eb9e11a3c)
-
-The container holding our winery list has bootstrap overflow capabilities. So the container is scrollable while not moving the page. This allowed for the search/filter tab to stay in place
-
-![22](https://github.com/player1xs/Space-Invaders/assets/148089820/2cc247d8-a785-405a-b5b2-5dbba7e1d053)
-
-### Winery Single page
-
-This where all our information from the database really came in which we extracted and brought in with our LoaderData. 
-Additionally, I used the Leaflet Mapbox here again with a custom icon.
-Also brought in our review data. (if any already there)
-Plus a form for new reviews to be left.
-Assigned all parts of information into their own <divs> so I could manipulate them for styling by targeting direct classnames.
-
-
-
-![23](https://github.com/player1xs/Space-Invaders/assets/148089820/8442e49d-5ed8-4012-9e88-dce18aefac63)
-
-![24](https://github.com/player1xs/Space-Invaders/assets/148089820/04572fc4-903e-4974-b983-19a1633e4929)
-
-![25](https://github.com/player1xs/Space-Invaders/assets/148089820/0104b223-1c60-4015-b17d-34e63fbc944b)
-![26](https://github.com/player1xs/Space-Invaders/assets/148089820/522f5c24-e42f-4212-8c10-40144ee07837)
-![27](https://github.com/player1xs/Space-Invaders/assets/148089820/ed04fc30-f69c-4aea-a9dd-2e603fbec4ab)
-
-
-
-### Styling
-I have mentioned styling a bit already and shown some images of the finished page. Therefore I wont go into too much detail about the SCSS written. Styling was done with a mix of Sass and Bootstrap.
-Once the team settled on a colour scheme. I cracked on and styled the entire application. All gradients, shading, flex layouts, strict image sizing, and flexible text boxes if more text is required.
-Feel free to browse through .scss files for anything in particular. Each file corresponds to their related .jsx file and everything has its own className for ease of use/identification/targeting.
-
-
-
-## Challenges
-The biggest challenge I faced was trying to target specific items within the LeafletMap and Carousel packages. As they basically came somewhat prepackaged. Some of the nested classNames couldn’t always be targeted or showed no change as they had their own styling with a higher priority - but none of that could be seen by me.
-But with some additional <divs> and classNames, I made due and got everything the way I wanted in the end.
-
-## Win
-Although challenging to target for styling; when I got the map working with custom markers I was over the moon. How clean it was to implement with our database.
-And having gone over my notes in advance with a few additional practice sessions - I managed to write the entire server-side in an afternoon, solo. Through team testing we found only 2 spelling mistakes; which were easily remedied and quickly found.
-
-## Takeaways
-Although the server was quick to set up, there is more to be understood. 
-Going into it, the amount of logic handling on the front-end, ended up much bigger than I expected. I know not to take it for granted or underestimate it. (We did add a fair bit of error handling and fallbacks to make the application airtight)
-
+New learning I achieved while building this project includes:
+- Create register and log in functionality within a modal.
+- Performing multiple request types within one action function in React.
+- Sending error messages to a user from the server side.
+- Creating a server proxy in the Vite configuration.
 
 ## Bugs
-Once a review is posted, sometimes a user can’t leave a second one, but sometimes can.
-On the create field. If image upload is clicked and the file selected and then the complete form button is clicked before the image has loaded on the form it would not load/added to the database. (this can be fixed by streamlining the useState with some better logic).
+
+No current known bugs.
 
 ## Future Improvements
-Function to differentiate the user 1. Winery Owner 2. Visitor.
-Users can earn badges eg: amount of places left, reviews left, etc..
-Profile page displays favourite wineries + wishlist.
-Profile update/delete.
-Profile icon in the top corner turns into a user icon image.
-Filter by avg rating.
-Add a Are you of age modal on the landing page.
-Newsletter and Blog component.
-Add a foreign weather api linked to our geocode to display current weather/forecast at the winery location.
-Change the location input. Instead of adding Longitude/Latitude, an autocomplete text field to enter address (there is a mapbox api for this).
+
+I would like to add the following to this application in the future:
+- Create two user types, vigneron and voyager, that would have different CRUD capabilities.
+- Users can earn badges for the number of reviews they have posted.
+- Add a wishlist/favourites button that would save wineries to a user’s profile page.
+- A user’s profile page would display places they have visited, their wishlist and reviews they have posted.
+- Profile update, delete and password change capability.
+- The profile icon to change to a user’s profile picture once logged in.
+- Average rating displayed on the winery index page.
+- Add filters by average rating on the winery index page.
+- Add weather API data to the single winery page to help plan a trip to that location.
+- Use the mapbox API to make the winery location easier to input and more dynamic.
