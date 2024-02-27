@@ -68,7 +68,7 @@ After deciding on the idea for our application, I created a diagram of the main 
 
 I also led in creating a diagram for our server side, detailing the flow of processing and connectivity of our application.
 
-![2-back-end-diagram](https://github.com/jamesbraid11/Vinous-Voyages/assets/147768485/85dad857-b92f-449b-93c9-90322e65db2a)
+<img width="605" alt="2-back-end-diagram" src="https://github.com/jamesbraid11/Vinous-Voyages/assets/147768485/43c42c36-ad96-4db8-b9c3-525b6d7ecbe2">
 
 Next, we created wireframe designs for our main client side components. Below is an example, the wireframe for our home page:
 
