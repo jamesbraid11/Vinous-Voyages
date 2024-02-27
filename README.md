@@ -10,7 +10,7 @@ The third project I undertook in my SEI training was to build a full-stack MERN 
 
 ## Code Installation
 
-1. [GitHub repo](https://github.com/jamesbraid11/Vinous-Voyages)
+1. Navigate to [GitHub repo](https://github.com/jamesbraid11/Vinous-Voyages)
 2. Download directory
 3. Server side:
    - npm install in root directory
