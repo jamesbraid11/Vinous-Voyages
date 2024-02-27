@@ -64,7 +64,7 @@ This was a collaborative project in which I was placed in a group of three. We w
 
 After deciding on the idea for our application, I created a diagram of the main components we would need on the client side. I then assigned names for the components, their paths and their loaders or actions (where applicable) to be used in our code.
 
-![1-front-end-diagram](https://github.com/jamesbraid11/Vinous-Voyages/assets/147768485/842a8282-65e7-4e72-88d2-0fdb48bb57a8)
+<img width="1184" alt="1-front-end-diagram" src="https://github.com/jamesbraid11/Vinous-Voyages/assets/147768485/2275da0c-6f70-416e-b163-dba3e99f41c8">
 
 I also led in creating a diagram for our server side, detailing the flow of processing and connectivity of our application.
 
@@ -72,11 +72,11 @@ I also led in creating a diagram for our server side, detailing the flow of proc
 
 Next, we created wireframe designs for our main client side components. Below is an example, the wireframe for our home page:
 
-![3-wireframe](https://github.com/jamesbraid11/Vinous-Voyages/assets/147768485/fc4ad071-faf5-433d-a9c8-5a93aaedea77)
+<img width="1179" alt="3-wireframe" src="https://github.com/jamesbraid11/Vinous-Voyages/assets/147768485/aca885c1-e400-444e-8820-989fa8c099b8">
 
 Finally, I created a Trello board for this project to ensure we would keep track of our progress accurately and share workloads fairly.
 
-![4-trello](https://github.com/jamesbraid11/Vinous-Voyages/assets/147768485/7c00eb2f-3007-43e5-9f77-9e3653bd98a4)
+![4-trello](https://github.com/jamesbraid11/Vinous-Voyages/assets/147768485/8a2f2bff-111a-485e-8777-9ed08071891d)
 
 ## Code Process
 
